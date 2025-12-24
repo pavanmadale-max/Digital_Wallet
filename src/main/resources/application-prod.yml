@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://prod-db-server:3306/Digital_wallet_product
+    username: root
+    password: MySQL@123
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
