@@ -1,11 +1,14 @@
 package com.digitalwallet.walletservice.service;
 
-import org.springframework.stereotype.Service;
+import com.digitalwallet.walletservice.dto.WalletRequestDTO;
+import com.digitalwallet.walletservice.dto.WalletResponseDTO;
 
-@Service
-public class WalletService {
+import java.math.BigDecimal;
 
-    public String getServiceStatus(){
-        return "Wallet service is working properly";
-    }
+public interface WalletService {
+
+    WalletResponseDTO createWallet(WalletRequestDTO request);
+    WalletResponseDTO getWallet(Long walletId);
+    BigDecimal getBalance(Long walletId);
+    public String getServiceStatus();
 }
